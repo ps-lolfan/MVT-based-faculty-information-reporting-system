@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+<script>
+var myCenter1=new google.maps.LatLng(15.369382,75.122045);
+
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter1,
+  zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter1,
+  position:myCenter1,icon:'sr.png'
+  });
+marker.setMap(map);
+
+
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Faculty System</title>
+
+
+        <style>
+#bg{
+    
+    height: 400 px;
+    background-repeat: no-repeat;
+    background-position: top;
+   
+
+}
+
+
+
+
+.alternate-option {
+  margin-left: 10px;
+}
+
+
+    </style>
+</head>
+<form method='post'>
+<body id="bg" style="background-image: url('{% static 'img/n.jpg'%}')";>
+
+
+<div class="box valign-wrapper, center-align">
+<br>
+    <img src="{% static 'img/logo.png' %}">
+
+    <h5>LOGIN AS</h5>
+<a class="waves-effect waves-light btn pulse" href="{% url 'vieww' %}" >ADMIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="waves-effect waves-light btn pulse"  href="{% url 'viewww' %}">
+    <i class="mdi-file-cloud left "></i>HOD</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="waves-effect waves-light btn pulse"  href="{% url 'faculty' %}">
+    <i class="mdi-file-cloud left "></i>Faculty</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+    <div id="featureWrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center feature">
+                    <i class="fa fa-tablet icon"></i>
+                    
+            </div>
+        </div>
+    </div>
+    <div id="contactWrap">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                        <div class="col-xs-12">
+                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <div class="blurb">
+                        
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-2">
+                            <div class="inputContainer">
+                            
+
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="inputContainer">
+                            
+                            </div>
+                        </div>
+                        
+
+
+
+
+
+
+
+
+
+                        
+                        <div  class="col-sm-8 col-sm-offset-2">
+                        <br><br>
+                            <h2>ABOUT KLE Tech</h2>
+
+<p>KLE Technological University is a private university in Hubballi/Hubli. It was earlier known as B.V. Bhoomaraddi College of Engineering and Technology (BVBCET) and was upgraded to a university under the KLE Technological University Act, 2012.</p><br>
+                <h2> HISTORY</h2>
+<p>KLE Technological University (formerly BVBCET) was established by the Karnatak Lingayat Education Society (KLE Society). It owes its original name to the businessman-philanthropist Shri Basappa Veerappa Bhoomaraddi. It began as a polytechnic in Gadag but shifted to Hubli in 1948 and upgraded itself to a college. Until 1972, it offered only diploma and undergraduate degree programs..</p> <br>
+                        <h2>ACADEMICS</h2>
+
+<p>The university offers 12 undergraduate programs, eight postgraduate programs, and research programs in seven disciplines. It is affiliated to Visvesvaraya Technological University, Belgaum and its undergraduate programs are accredited by the National Board of Accreditation (NBA) of the All India Council for Technical Education (AICTE).</p>
+<br>
+<h2>CAMPUS</h2>
+
+<p>Spread over 53 acres (210,000 m2), the campus has buildings with varied architecture, comprising classrooms, laboratories, and hostel facilities for boys and girls</p>  
+<h2>Location </h2>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div> <!-- /contactWrap -->
+<div id="googleMap" style="width:1350px;height:600px;"></div>
+
+
+
+</body>
+</form>
+</html>
